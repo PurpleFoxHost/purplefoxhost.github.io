@@ -48,11 +48,11 @@
       "name": "Validatelogin",
       "text": "Check if a email matches a password",
       "url": "https://api.purplefoxhost.com/validatelogin?email=a-email&password=a-password",
-      "method": "POST",
+      "method": "GET",
       "response": {
         "format": "json",
         "example": "example-responses/validatelogin.json"
       }
-    },
+    }
   ]
 }
