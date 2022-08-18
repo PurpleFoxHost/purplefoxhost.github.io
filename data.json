@@ -1,38 +1,58 @@
 {
-  "title": "Validator.pizza API",
-  "subtitle": "Example API Documentation for the <a href='https://www.validator.pizza/'>Validator.pizza</a> disposable Email Checker API.",
-  "logo": "images/logo.svg",
-  "footer": "<strong>🌭 HotDocs</strong> was made by <a href='https://twitter.com/AnTheMaker'>An</a>. This is an Example API Documentation for <a href='https://www.validator.pizza/'>validator.pizza</a> and not affiliated with it!",
+  "title": "PurpleFoxHost API Docs",
+  "subtitle": "API Documentation for the <a href='https://purplefoxhost.com/'>PurpleFoxHost</a> API.",
+  "logo": "images/logo.png",
+  "footer": "<strong>©PurpleFoxHost.com</strong>",
   "base":{
-    "url": "https://www.validator.pizza/",
-    "info": "All Endpoints only support GET Requests . No POST, PUT or DEELETE Requests please."
+    "url": "https://api.purplefoxhost.com/",
+    "info": "All Endpoints support the CRUD protocol."
   },
-  "auth": "This API doesn't require any Authentication.",
-  "limits": "The number of request is limited to 120 requests per hour, per IP address. I wanted to make it unlimited, but some people like to go wild, so I had to set a limit to guarantee the good functionality for everyone. If you need a higher limit, please <a href='https://twitter.com/thomaspetracco'>contact me on Twitter</a>.\nAll IPs sending excessive requests will be banned.",
+  "auth": "This API requires authentication for ALL endpoints.",
+  "limits": "Limits are not enforced.",
   "contact": {
-    "link": "https://twitter.com/thomaspetracco",
-    "info": "If you need help using this API, please don't hesistate to contact me on Twitter."
+    "link": "https://discord.gg/zMxZtJTwPt",
+    "info": "If you need help using this API, join our Discord server."
   },
   "endpoints":[
     {
-      "name": "Validate an email",
-      "text": "Detect if an Email is disposable or not.",
-      "url": "https://www.validator.pizza/email/email@example.com",
-      "method": "get",
+      "name": "Checkpassword",
+      "text": "Check if a password is correct",
+      "url": "https://api.purplefoxhost.com/checkpassword?email=a-email&password=a-password",
+      "method": "GET",
       "response": {
         "format": "json",
-        "example": "example-responses/email.txt"
+        "example": "example-responses/checkpassword.json"
       }
     },
     {
-      "name": "Validate a domain",
-      "text": "Detect if a Domain is used for disposable Email Addresses.",
-      "url": "https://www.validator.pizza/domain/example.com",
-      "method": "get",
+      "name": "Deleteuser",
+      "text": "Delete a user from the system and panel",
+      "url": "https://api.purplefoxhost.com/deleteuser?email=a-email",
+      "method": "DELETE",
       "response": {
         "format": "json",
-        "example": "example-responses/domain.txt"
+        "example": "example-responses/deleteuser.json"
       }
-    }
+    },
+    {
+      "name": "Newuser",
+      "text": "Register a new user to the panel and billing",
+      "url": "https://api.purplefoxhost.com/newuser?email=a-email&password=a-password&username=a-username",
+      "method": "POST",
+      "response": {
+        "format": "json",
+        "example": "example-responses/newuser.json"
+      }
+    },
+    {
+      "name": "Validatelogin",
+      "text": "Check if a email matches a password",
+      "url": "https://api.purplefoxhost.com/validatelogin?email=a-email&password=a-password",
+      "method": "POST",
+      "response": {
+        "format": "json",
+        "example": "example-responses/validatelogin.json"
+      }
+    },
   ]
 }
