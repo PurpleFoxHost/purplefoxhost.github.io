@@ -1,0 +1,34 @@
+// User created
+{
+    "success": true
+}
+
+// General error
+{
+    "success": false
+}
+
+// Database error
+{
+    "error": "Database error"
+}
+
+// Username already in use
+{
+    "error": "Username already taken"
+}
+
+// Username too big
+{
+    "error": "Username too big"
+}
+
+// Email already in use
+{
+    "error": "Email already taken"
+}
+
+// Email too big
+{
+    "error": "Email too big"
+}
