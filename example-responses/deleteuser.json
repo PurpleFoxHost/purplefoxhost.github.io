@@ -1,0 +1,9 @@
+// Success:
+{
+    "success": true
+}
+
+// Failure:
+{
+    "success": false
+}
