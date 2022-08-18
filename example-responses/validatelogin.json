@@ -1,0 +1,14 @@
+// Email and password match
+{
+    "correct": true
+}
+
+// Email and password don't match
+{
+    "correct": false
+}
+
+// Email too big
+{
+    "error": "Email too big"
+}
